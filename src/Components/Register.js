@@ -42,8 +42,9 @@ const useStyle = makeStyles((theme: Theme) =>
   })
 );
 
-const Login = () => {
+const Register = () => {
   const classes = useStyle();
+  const preventDefault = (event) => event.preventDefault();
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (values) => {
     console.log(values);
@@ -61,7 +62,7 @@ const Login = () => {
           <Grid item xs={12} sm={8} md={6} lg={4}>
             <Paper className={classes.paper}>
               <Typography variant="h3" gutterBottom>
-                Login
+                Register
               </Typography>
               <form
                 onSubmit={handleSubmit(onSubmit)}
@@ -89,7 +90,17 @@ const Login = () => {
                   fullWidth
                   error={errors.email ? true : false}
                 />
-
+                <TextField
+                  name="password"
+                  type="password"
+                  inputRef={register}
+                  label="Confirm password"
+                  className={classes.textField}
+                  margin="normal"
+                  variant="outlined"
+                  fullWidth
+                  error={errors.email ? true : false}
+                />
                 <Button
                   className={classes.button}
                   type="submit"
@@ -102,10 +113,10 @@ const Login = () => {
                 <Link
                   className={classes.button}
                   fullWidth
-                  href="/"
+                  href="/login"
                   //  onClick={preventDefault}
                 >
-                  New user Register here.
+                  Already have an account Login here.
                 </Link>
               </form>
             </Paper>
@@ -116,4 +127,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
