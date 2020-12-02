@@ -9,7 +9,7 @@ const Toast = () => {
     if (count > 0) {
       const timeout = setTimeout(() => {
         setCount(count - 1);
-      }, 2000);
+      }, 1000);
       return () => clearTimeout(timeout);
     }
   }, [count]);
@@ -27,7 +27,10 @@ const Toast = () => {
       >
         Click Me...
       </button>
-      <div className="container"> {count > 0 && <Notif count={count} />}</div>
+      <div className="containerbox">
+        {" "}
+        {count > 0 && <Notif count={count} />}
+      </div>
     </div>
   );
 };

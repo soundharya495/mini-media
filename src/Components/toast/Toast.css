@@ -13,7 +13,7 @@ body {
 .containerbox {
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: 0px;
 }
 
 .toast {
