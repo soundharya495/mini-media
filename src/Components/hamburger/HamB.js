@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import "./HamB.css";
+//import "./HamB.css";
 
 class HamB extends Component {
   componentDidMount() {
