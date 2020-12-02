@@ -6,10 +6,12 @@ const Toast = () => {
   const [click, setClick] = useState(false);
   const [count, setCount] = useState(0);
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setCount(count - 1);
-    }, 2000);
-    return () => clearTimeout(timeout);
+    if (count > 0) {
+      const timeout = setTimeout(() => {
+        setCount(count - 1);
+      }, 2000);
+      return () => clearTimeout(timeout);
+    }
   }, [count]);
 
   //const notification = <div className="toast">The challenge is crazy</div>;
@@ -25,7 +27,7 @@ const Toast = () => {
       >
         Click Me...
       </button>
-      {count > 0 && <Notif count={count} />}
+      <div className="container"> {count > 0 && <Notif count={count} />}</div>
     </div>
   );
 };
