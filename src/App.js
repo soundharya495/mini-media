@@ -6,6 +6,7 @@ import HamB from "./Components/hamburger/HamB";
 import Toast from "./Components/toast/Toast";
 import Typewriter from "./Components/typewriter/Typewriter";
 import Home from "./Components/popup/Home";
+import Darkmode from "./Components/darkmode-toggle/Darkmode";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <div className="App">
         {/* <Route exact path="/" component={Register} />
         <Route exact path="/login" component={Login} /> */}
-        <Home />
+        <Darkmode />
       </div>
     </BrowserRouter>
   );
