@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Darkmode.css";
 
 const Darkmode = () => {
-  const [mode, setmode] = useState(true);
+  const [mode, setmode] = useState(false);
   useEffect(() => {
     const docBody = document.querySelector("body");
     docBody.classList.toggle("dark");
